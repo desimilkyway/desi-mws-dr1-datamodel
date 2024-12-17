@@ -7,7 +7,7 @@ The DESI MWS data Tree
 
 This hosts the key products from the RVSpecfit and FERRE pipelines.
 The outputs are groups two pipelines are given separately with the
-exceptoin of mwsall table that combined the outputs from the two
+exception of mwsall table that combined the outputs from the two
 pipelines in one file, as well as identifies duplicates observed
 in different surveys and programs.
 
