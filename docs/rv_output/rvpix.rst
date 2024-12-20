@@ -77,7 +77,6 @@ TEFF_ERR    float64 K      Effective temperature uncertainty
 ALPHAFE_ERR float64        [alpha/Fe] uncertainty from template fitting
 FEH_ERR     float64        [Fe/H] uncertainty from template fitting
 VSINI       float64 km s-1 Stellar rotation velocity
-NEXP        int64
 CHISQ_TOT   float64        Total chi-square for all arms
 CHISQ_C_TOT float64        Total chi-square for all arms for polynomial only fit
 CHISQ_B     float64        Chi-square in the B arm
@@ -96,9 +95,9 @@ SN_B        float32        Median S/N in the B arm
 SN_R        float32        Median S/N in the R arm
 SN_Z        float32        Median S/N in the Z arm
 SUCCESS     logical        Did we succeed or fail
-HEALPIX     int64          HEALPixel containing this location at NSIDE=64 in the NESTED scheme
 RR_Z        float64        Redrock redshift
-RR_SPECTYPE char[6]        Redrock spectroscopic type
+RR_SPECTYPE char[6]        Redrock spectype
+HEALPIX     int64          HEALPixel containing this location at NSIDE=64 in the NESTED scheme
 =========== ======= ====== ===================================================================================================
 
 HDU2
@@ -132,8 +131,8 @@ Name                       Type    Units        Description
 ========================== ======= ============ ===============================================================================================================================
 TARGETID                   int64                Unique DESI target ID
 COADD_FIBERSTATUS          int32                bitwise-AND of input FIBERSTATUS
-TARGET_RA                  float64 deg          Target right ascension
-TARGET_DEC                 float64 deg          Target declination
+TARGET_RA                  float64 deg          Barycentric right ascension in ICRS
+TARGET_DEC                 float64 deg          Barycentric declination in ICRS
 PMRA                       float32 mas yr^-1    proper motion in the +RA direction (already including cos(dec))
 PMDEC                      float32 mas yr^-1    Proper motion in the +Dec direction
 REF_EPOCH                  float32 yr           Reference epoch for Gaia/Tycho astrometry. Typically 2015.5 for Gaia
@@ -169,7 +168,7 @@ SERSIC                     float32              Power-law index for the Sersic p
 SHAPE_R                    float32 arcsec       Half-light radius of galaxy model (&gt;0)
 SHAPE_E1                   float32              Ellipticity component 1 of galaxy model for galaxy type MORPHTYPE
 SHAPE_E2                   float32              Ellipticity component 2 of galaxy model for galaxy type MORPHTYPE
-REF_ID                     int64                Tyc1*1,000,000+Tyc2*10+Tyc3 for Tycho-2; sourceid for Gaia DR2
+REF_ID                     int64                Tyc1*1,000,000+Tyc2*10+Tyc3 for Tycho-2; ``sourceid`` for Gaia DR2
 REF_CAT                    char[2]              Reference catalog source for star: T2 for Tycho-2, G2 for Gaia DR2, L2 for the SGA, empty otherwise
 GAIA_PHOT_G_MEAN_MAG       float32 mag          Gaia G band magnitude
 GAIA_PHOT_BP_MEAN_MAG      float32 mag          Gaia BP band magnitude
@@ -178,12 +177,15 @@ PARALLAX                   float32 mas          Reference catalog parallax
 PHOTSYS                    char[1]              N for the MzLS/BASS photometric system, S for DECaLS
 PRIORITY_INIT              int64                Target initial priority from target selection bitmasks and OBSCONDITIONS
 NUMOBS_INIT                int64                Initial number of observations for target calculated across target selection bitmasks and OBSCONDITIONS
-CMX_TARGET                 int64                Target selection bitmask for commissioning
+SV2_DESI_TARGET            int64                DESI (dark time program) target selection bitmask for SV2
+SV2_BGS_TARGET             int64                BGS (bright time program) target selection bitmask for SV2
+SV2_MWS_TARGET             int64                MWS (bright time program) target selection bitmask for SV2
+SV2_SCND_TARGET            int64                Secondary target selection bitmask for SV2
 DESI_TARGET                int64                DESI (dark time program) target selection bitmask
 BGS_TARGET                 int64                BGS (Bright Galaxy Survey) target selection bitmask
 MWS_TARGET                 int64                Milky Way Survey targeting bits
-PLATE_RA                   float64 deg          Right Ascension to be used by PlateMaker
-PLATE_DEC                  float64 deg          Declination to be used by PlateMaker
+PLATE_RA                   float64 deg          Barycentric Right Ascension in ICRS to be used by PlateMaker
+PLATE_DEC                  float64 deg          Barycentric Declination in ICRS to be used by PlateMaker
 COADD_NUMEXP               int16                Number of exposures in coadd
 COADD_EXPTIME              float32 s            Summed exposure time for coadd
 COADD_NUMNIGHT             int16                Number of nights in coadd
