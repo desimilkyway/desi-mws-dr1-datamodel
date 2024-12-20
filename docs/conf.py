@@ -61,7 +61,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'edrdatamodel'
+project = u'dr1datamodel'
 copyright = u'2014-2022, DESI Collaboration'
 
 # The version info for the project you're documenting, acts as replacement for
