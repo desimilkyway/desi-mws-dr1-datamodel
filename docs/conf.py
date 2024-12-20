@@ -35,7 +35,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'sphinx_toolbox.collapse'  # pip install sphinx-toolbox
+#    'sphinx_toolbox.collapse'  # pip install sphinx-toolbox
 ]
 
 # Configuration for intersphinx, copied from astropy.
