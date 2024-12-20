@@ -35,7 +35,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-#    'sphinx_toolbox.collapse'  # pip install sphinx-toolbox
+    'sphinx_toolbox.collapse'  # pip install sphinx-toolbox
 ]
 
 # Configuration for intersphinx, copied from astropy.
@@ -62,7 +62,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'dr1datamodel'
-copyright = u'2014-2022, DESI Collaboration'
+copyright = u'2014-2024, DESI MWS Collaboration'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
