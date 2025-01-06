@@ -5,11 +5,14 @@ Welcome to the DESI MWS data Model!
 The DESI MWS data Tree
 ----------------------
 
-This hosts the key products from the RVSpecfit and FERRE pipelines.
-The outputs are groups two pipelines are given separately with the
-exception of mwsall table that combined the outputs from the two
-pipelines in one file, as well as identifies duplicates observed
-in different surveys and programs.
+This hosts the description of the data products for stars in
+DESI from the RVSpecfit and FERRE pipelines. This description
+is based on the data from the DR1 data release.
+
+The outputs from two pipelines are given separately with the
+exception of of the main mwsall table that combines the outputs
+from the two pipelines in one file, as well as identifies
+duplicates observed in different surveys and programs.
 
 DESI MWS data
 
