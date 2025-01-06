@@ -21,7 +21,7 @@ DESI MWS data
 
    RVSpecfit output : rv_output <rv_output/index>
    FERRE output : sp_output <sp_output/index>
-   Main measurement table for all sources : <mwsall>
+   Main measurement table for all sources : mwsall <mwsall>
 
 
 Indices and Tables
