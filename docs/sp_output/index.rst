@@ -9,5 +9,5 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   RVRUN/index
+   SPRUN/index
    
