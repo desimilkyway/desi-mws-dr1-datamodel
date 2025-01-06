@@ -10,4 +10,4 @@ Contents:
    :maxdepth: 1
 
    healpix/index
-   
+   sppix

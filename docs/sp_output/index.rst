@@ -10,5 +10,4 @@ Contents:
    :maxdepth: 1
 
    RVRUN/index
-   sppix
    
