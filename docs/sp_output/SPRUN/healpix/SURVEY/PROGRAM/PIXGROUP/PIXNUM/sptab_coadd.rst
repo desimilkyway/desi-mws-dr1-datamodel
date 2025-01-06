@@ -7,7 +7,7 @@ sptab_coadd
     SURVEY is main, special, sv1, sv2, sv3, and PROGRAM is dark, bright, 
     backup, other.
 :Regex: ``sptab_coadd-.*-.*-.*.fits`` 
-:File Type: FITS, 100 KB  
+:File Type: FITS, 135 KB  
 
 Contents
 ========
@@ -38,28 +38,28 @@ Required Header Keywords
 
     .. rst-class:: keywords
 
-    ======== ========================== ===== =======
-    KEY      Example Value              Type  Comment
-    ======== ========================== ===== =======
-    DATE     2022-04-03T16:48:32        str   Date of processing
-    FCONFIG  desi-ms.yaml               str   FERRE config information
-    HOST     login1                     str   machine used
-    OS       posix                      str   Operative system
-    PLATFORM Linux 4.4.90-92.45-default str   OS details
-    NSPEC    7                          int   Number of spectra included
-    FTIME    234.041                    float Compute time used by FERRE
-    STIME    900.0                      float Compute time estimated for Slurm
-    NCORES   16                         int   Number of cores in node
-    NTHREADS 12                         int   Number of cores used by large FERRE instances
-    NUMPY    1.17.2                     str   NumPy version
-    ASTROPY  3.2.2                      str   AstroPy version
-    MATPLOTL 3.1.1                      str   Matplotlib version
-    SCIPY    1.3.1                      str   SciPy version
-    YAML     5.1.2                      str   Yaml version
-    PYTHON   3.7.4                      str   Python version
-    PIFERRE  0.4                        str   Piferre version
-    FERRE    5.0.0                      str   FERRE version
-    ======== ========================== ===== =======
+    ======== ================================================ ===== =======
+    KEY      Example Value                                    Type  Comment
+    ======== ================================================ ===== =======
+    DATE     2023-04-09T03:26:22                              str   Date of processing
+    FCONFIG  desi-sm.yaml                                     str   FERRE config information
+    HOST     login36                                          str   machine used
+    OS       posix                                            str   Operative system
+    PLATFORM Linux 5.14.21-150400.24.46_12.0.63-cray_shasta_c str   OS details
+    NSPEC    93                                               int   Number of spectra included
+    FTIME    5202.688                                         float Compute time used by FERRE
+    STIME    2520.0                                           float Compute time estimated for Slurm
+    NCORES   64                                               int   Number of cores in node
+    NTHREADS 12                                               int   Number of cores used by large FERRE instances
+    NUMPY    1.21.5                                           str   NumPy version
+    ASTROPY  5.1                                              str   AstroPy version
+    MATPLOTL 3.5.2                                            str   Matplotlib version
+    SCIPY    1.7.3                                            str   SciPy version
+    YAML     6.0                                              str   Yaml version
+    PYTHON   3.9.7                                            str   Python version
+    PIFERRE  0.4                                              str   Piferre version
+    FERRE    5.1.1                                            str   FERRE version
+    ======== ================================================ ===== =======
 
 
 HDU1
@@ -79,8 +79,8 @@ Required Header Keywords
     ====== ============= ==== =====================
     KEY    Example Value Type Comment
     ====== ============= ==== =====================
-    NAXIS1 448           int  length of dimension 1
-    NAXIS2 7             int  length of dimension 2
+    NAXIS1 545           int  length of dimension 1
+    NAXIS2 93            int  length of dimension 2
     ====== ============= ==== =====================
 
 Required Data Table Columns
@@ -93,11 +93,11 @@ Name       Type        Units  Description
 ========== =========== ====== ===================================================================================================
 SUCCESS    int64              Bit indicating whether the code has likely produced useful results
 TARGETID   int64              Unique DESI target ID
-TARGET_RA  float64     deg    Target right ascension
-TARGET_DEC float64     deg    Target declination
-REF_ID     int64              Tyc1*1,000,000+Tyc2*10+Tyc3 for Tycho-2; sourceid for Gaia DR2
-REF_CAT    char[2]            Reference catalog source for star: T2 for Tycho-2, G2 for Gaia DR2, L2 for the SGA, empty otherwise
-SRCFILE    char[20]           DESI data file
+TARGET_RA  float64     deg    Barycentric right ascension in ICRS
+TARGET_DEC float64     deg    Barycentric declination in ICRS
+REF_ID     int64              Tyc1*1,000,000+Tyc2*10+Tyc3 for Tycho-2; ``sourceid`` for Gaia DR2
+REF_CAT    char[2]            Reference catalog source for star: 'T2' for Tycho-2, 'G2' for Gaia DR2, 'L2' for the SGA, empty otherwise
+SRCFILE    char[23]           DESI data file
 BESTGRID   char[8]            Model grid that produced the best fit
 TEFF       float64     K      Effective temperature (K)
 LOGG       float64            Surface gravity (g in cm/s**2)
@@ -106,8 +106,8 @@ ALPHAFE    float64            Alpha-to-iron ratio [alpha/Fe]
 LOG10MICRO float64            Log10 of Microturbulence (km/s)
 PARAM      float64[5]         Array of atmospheric parameters ([Fe/H], [a/Fe], log10micro, Teff,logg)
 COVAR      float64[25]        Covariance matrix for ([Fe/H], [a/Fe], log10micro, Teff,logg)
-ELEM       float64[4]         Elemental abundance ratios to hydrogen [elem/H]
-ELEM_ERR   float64[4]         Uncertainties in the elemental abundance ratios
+ELEM       float64[10]        Elemental abundance ratios to hydrogen [elem/H]
+ELEM_ERR   float64[10]        Uncertainties in the elemental abundance ratios
 CHISQ_TOT  float64            Total chi**2
 SNR_MED    float64            Median signal-to-ratio
 RV_ADOP    float64     km s-1 Adopted Radial Velocity (km/s)
@@ -131,8 +131,8 @@ Required Header Keywords
     ====== ============= ==== =====================
     KEY    Example Value Type Comment
     ====== ============= ==== =====================
-    NAXIS1 341           int  length of dimension 1
-    NAXIS2 7             int  length of dimension 2
+    NAXIS1 317           int  length of dimension 1
+    NAXIS2 93            int  length of dimension 2
     ====== ============= ==== =====================
 
 Required Data Table Columns
@@ -145,8 +145,8 @@ Name                       Type    Units        Description
 ========================== ======= ============ ===============================================================================================================================
 TARGETID                   int64                Unique DESI target ID
 COADD_FIBERSTATUS          int32                bitwise-AND of input FIBERSTATUS
-TARGET_RA                  float64 deg          Target right ascension
-TARGET_DEC                 float64 deg          Target declination
+TARGET_RA                  float64 deg          Barycentric right ascension in ICRS
+TARGET_DEC                 float64 deg          Barycentric declination in ICRS
 PMRA                       float32 mas yr^-1    proper motion in the +RA direction (already including cos(dec))
 PMDEC                      float32 mas yr^-1    Proper motion in the +Dec direction
 REF_EPOCH                  float32 yr           Reference epoch for Gaia/Tycho astrometry. Typically 2015.5 for Gaia
@@ -182,7 +182,7 @@ SERSIC                     float32              Power-law index for the Sersic p
 SHAPE_R                    float32 arcsec       Half-light radius of galaxy model (&gt;0)
 SHAPE_E1                   float32              Ellipticity component 1 of galaxy model for galaxy type MORPHTYPE
 SHAPE_E2                   float32              Ellipticity component 2 of galaxy model for galaxy type MORPHTYPE
-REF_ID                     int64                Tyc1*1,000,000+Tyc2*10+Tyc3 for Tycho-2; sourceid for Gaia DR2
+REF_ID                     int64                Tyc1*1,000,000+Tyc2*10+Tyc3 for Tycho-2; ``sourceid`` for Gaia DR2
 REF_CAT                    char[2]              Reference catalog source for star: T2 for Tycho-2, G2 for Gaia DR2, L2 for the SGA, empty otherwise
 GAIA_PHOT_G_MEAN_MAG       float32 mag          Gaia G band magnitude
 GAIA_PHOT_BP_MEAN_MAG      float32 mag          Gaia BP band magnitude
@@ -191,15 +191,12 @@ PARALLAX                   float32 mas          Reference catalog parallax
 PHOTSYS                    char[1]              N for the MzLS/BASS photometric system, S for DECaLS
 PRIORITY_INIT              int64                Target initial priority from target selection bitmasks and OBSCONDITIONS
 NUMOBS_INIT                int64                Initial number of observations for target calculated across target selection bitmasks and OBSCONDITIONS
-SV3_DESI_TARGET            int64                DESI (dark time program) target selection bitmask for SV3
-SV3_BGS_TARGET             int64                BGS (bright time program) target selection bitmask for SV3
-SV3_MWS_TARGET             int64                MWS (bright time program) target selection bitmask for SV3
-SV3_SCND_TARGET            int64                Secondary target selection bitmask for SV3
+SCND_TARGET                int64                Target selection bitmask for secondary programs
 DESI_TARGET                int64                DESI (dark time program) target selection bitmask
 BGS_TARGET                 int64                BGS (Bright Galaxy Survey) target selection bitmask
 MWS_TARGET                 int64                Milky Way Survey targeting bits
-PLATE_RA                   float64 deg          Right Ascension to be used by PlateMaker
-PLATE_DEC                  float64 deg          Declination to be used by PlateMaker
+PLATE_RA                   float64 deg          Barycentric Right Ascension in ICRS to be used by PlateMaker
+PLATE_DEC                  float64 deg          Barycentric Declination in ICRS to be used by PlateMaker
 COADD_NUMEXP               int16                Number of exposures in coadd
 COADD_EXPTIME              float32 s            Summed exposure time for coadd
 COADD_NUMNIGHT             int16                Number of nights in coadd
@@ -233,7 +230,7 @@ Required Header Keywords
     KEY    Example Value Type Comment
     ====== ============= ==== =====================
     NAXIS1 172           int  length of dimension 1
-    NAXIS2 7             int  length of dimension 2
+    NAXIS2 93            int  length of dimension 2
     ====== ============= ==== =====================
 
 Required Data Table Columns
@@ -305,7 +302,7 @@ Required Header Keywords
     ====== ============= ==== =====================
     KEY    Example Value Type Comment
     ====== ============= ==== =====================
-    NAXIS1 232           int  length of dimension 1
+    NAXIS1 70            int  length of dimension 1
     NAXIS2 1             int  length of dimension 2
     ====== ============= ==== =====================
 
@@ -314,16 +311,9 @@ Required Data Table Columns
 
 .. rst-class:: columns
 
-==== ========= ===== ===========
-Name Type      Units Description
-==== ========= ===== ===========
-p    char[200]
-e    char[32]
-==== ========= ===== ===========
-
-
-Notes and Examples
-==================
-
-Example:
-https://data.desi.lbl.gov/desi/science/mws/redux/edr/v1/sp_output/220309/healpix/sv3/dark/105/10517/sptab_coadd-sv3-dark-10517.fits 
+==== ======== ===== ===========
+Name Type     Units Description
+==== ======== ===== ===========
+p    char[50]
+e    char[20]
+==== ======== ===== ===========
