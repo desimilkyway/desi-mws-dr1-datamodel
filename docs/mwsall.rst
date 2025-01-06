@@ -16,7 +16,7 @@ HDU1_  RVTAB    BINTABLE *RVSpecfit results*
 HDU2_  SPTAB    BINTABLE *FERRE results*
 HDU3_  FIBERMAP BINTABLE *Information about objects inherited from targeting*
 HDU4_  SCORES   BINTABLE *Information about spectra quality*
-HDU5_  GAIA     BINTABLE *Gaia crossmatch*
+HDU5_  GAIA     BINTABLE *Gaia DR3 crossmatch*
 ====== ======== ======== ====================================================
 
 
@@ -35,8 +35,10 @@ HDU1
 EXTNAME = RVTAB
 
 This is table of measurements by RVSpecfit of coadded DESI spectra.
-This table combines the measurements from different survey/program combinations
-and labels their suggested PRIMARY observation.
+This table combines the measurements from different survey/program combinations.
+When the objects were oberseved in different surveys/programs, the measurement
+with the highest signal to noise in the R arm can be identified using PRIMARY
+column.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,7 +77,6 @@ TEFF_ERR    float64 K      Effective temperature uncertainty
 ALPHAFE_ERR float64        [alpha/Fe] uncertainty from template fitting
 FEH_ERR     float64        [Fe/H] uncertainty from template fitting
 VSINI       float64 km s-1 Stellar rotation velocity
-NEXP        int64
 CHISQ_TOT   float64        Total chi-square for all arms
 CHISQ_C_TOT float64        Total chi-square for all arms for polynomial only fit
 CHISQ_B     float64        Chi-square in the B arm
