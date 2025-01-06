@@ -11,3 +11,4 @@ Contents:
 
    rvmod_coadd
    rvtab_coadd
+   rvtab_spectra
