@@ -311,9 +311,9 @@ Required Data Table Columns
 
 .. rst-class:: columns
 
-==== ======== ===== ===========
+==== ======== ===== ========================================================
 Name Type     Units Description
-==== ======== ===== ===========
-p    char[50]
-e    char[20]
-==== ======== ===== ===========
+==== ======== ===== ========================================================
+p    char[50]      The names of atmospheric parameters in the FERRE fit
+e    char[20]      The names of elements for which abundances were derived
+==== ======== ===== ========================================================
