@@ -5,12 +5,12 @@ Welcome to the DESI MWS data Model!
 The DESI MWS data Tree
 ----------------------
 
-This hosts the description of the data products for stars in
-DESI from the RVSpecfit and FERRE pipelines. This description
-is based on the data from the DR1 data release.
+This page hosts the description of the Milky Way Survey Value added
+catalogue files. This description is based on the data from the DR1 data release.
+This catalogues is based on the ouput from the from the RVSpecfit and FERRE pipelines.
 
 The outputs from two pipelines are given separately with the
-exception of of the main mwsall table that combines the outputs
+exception of the main mwsall table that combines the outputs
 from the two pipelines in one file, as well as identifies
 duplicates observed in different surveys and programs.
 
