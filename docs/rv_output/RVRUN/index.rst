@@ -10,8 +10,8 @@ from stacked spectra or individual exposures.
 This folder also contains the combined tables of measurements for
 different surveys/programs.
 
-I.e. rvpix-main-bright.fits contains rvspecfit measurements from stacked spectra in the  main survey, bright program.
-rvpix_exp-main-bright.fits contains measurements from single epoch observations in the main survey, bright program.
+I.e. `rvpix-main-bright.fits` contains rvspecfit measurements from stacked spectra in the  main survey, bright program, and
+`rvpix_exp-main-bright.fits` contains measurements from single epoch observations in the main survey, bright program.
 
 Contents:
 
