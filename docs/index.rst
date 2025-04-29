@@ -39,6 +39,6 @@ References and acknowledgemetns
 If you are using this catalogue, please ensure that you cite the relevant papers:
 
 * `The overview of the DESI Milky Way Survey <https://ui.adsabs.harvard.edu/abs/2023ApJ...947...37C/abstract>`_
-* `The value added catalogue paper  <https://ui.adsabs.harvard.edu/abs/2023ApJ...947...37C/abstract>`_
+* `The value added catalogue paper  <https://ui.adsabs.harvard.edu/abs/2024MNRAS.533.1012K/abstract>`_
 * DESI survey papers
  
