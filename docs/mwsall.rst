@@ -111,8 +111,8 @@ EXTNAME = SPTAB
 This is table of measurements by FERRE of coadded DESI spectra.
 This table combines the measurements from different survey/program pairs.
 This table has exactly the same length as the RVTAB and matches row by row
-the RVTAB extension. The abundances of different elements given the ELEM array
-are given in this order Fe, Ca, C, Mg, Si, Na, Cr, Ni, Al, Ti
+the RVTAB extension. The abundances of different elements in the ELEM array
+are given in this order Fe, Ca, C, Mg, Si, Na, Cr, Ni, Al, Ti.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
